@@ -10,7 +10,8 @@ const dictionaryService = {
         throw new Error('Network response was not ok');
       }
       const data = await response.json();
-      return data[0];
+      console.log(data[0].meanings[0].definitions[0].definition);
+      return data[0].meanings[0].definitions[0].definition;
     } catch (error) {
       console.error('Error fetching word details:', error.message);
       throw error;
