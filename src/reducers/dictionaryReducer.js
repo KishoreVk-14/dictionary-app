@@ -1,0 +1,11 @@
+const dictionaryReducer = (state = {}, action) => {
+    switch (action.type) {
+      case 'SET_WORD_DETAILS':
+        return { ...state, wordDetails: action.payload };
+      default:
+        return state;
+    }
+  };
+  
+  export default dictionaryReducer;
+  
